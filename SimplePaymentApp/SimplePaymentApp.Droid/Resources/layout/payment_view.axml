@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar_layout">
+            <include
+                layout="@layout/toolbar" />
+        </android.support.design.widget.AppBarLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar_layout">
+            <ImageView
+                android:id="@+id/CardsImage"
+                android:src="@drawable/credit_cards_logos"
+                android:layout_below="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:id="@+id/PaymentAmountText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textSize="12sp"
+                android:textColor="@color/primaryText"
+                android:layout_below="@+id/CardsImage"
+                android:layout_marginTop="10dp"
+                android:text="@string/payment_amount_text" />
+            <EditText
+                android:id="@+id/PaymentAmountSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@id/PaymentAmountText"
+                android:textSize="20sp"
+                android:background="@color/divider"
+                android:text="@string/payment_amount_sum"
+                android:editable="false" />
+            <TextView
+                android:id="@+id/NameOnCardText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textSize="12sp"
+                android:textColor="@color/primaryText"
+                android:layout_below="@+id/PaymentAmountSum"
+                android:layout_marginTop="10dp"
+                android:text="@string/name_on_card_text" />
+            <EditText
+                android:id="@+id/NameOnCardEnter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="50dp"
+                android:layout_below="@id/NameOnCardText"
+                android:textSize="20sp"
+                android:background="@color/background"
+                local:MvxBind="Text NameOnCardEnter" />
+            <TextView
+                android:id="@+id/CardNumberText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textSize="12sp"
+                android:textColor="@color/primaryText"
+                android:layout_below="@+id/NameOnCardEnter"
+                android:layout_marginTop="10dp"
+                android:text="@string/card_number_text" />
+            <EditText
+                android:id="@+id/CardNumberEnter"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="50dp"
+                android:layout_below="@id/CardNumberText"
+                android:maxLength="16"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:background="@color/background"
+                local:MvxBind="Text CardNumberEnter" />
+            <TextView
+                android:id="@+id/IncorrectCardNumber"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/CardNumberEnter"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="16dp"
+                android:textSize="12sp"
+                android:textColor="@color/alertText"
+                local:MvxBind="Text IncorrectCardNumber" />
+            <TextView
+                android:id="@+id/ExpiryDateText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/primaryText"
+                android:layout_below="@+id/IncorrectCardNumber"
+                android:text="@string/expiry_date_text" />
+            <EditText
+                android:id="@+id/ExpiryDateEnter"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@id/ExpiryDateText"
+                android:textSize="20sp"
+                android:maxLength="5"
+                android:background="@color/background"
+                local:MvxBind="Text ExpiryDateEnter" />
+            <TextView
+                android:id="@+id/SecurityText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/IncorrectDate"
+                android:layout_toRightOf="@id/ExpiryDateText"
+                android:layout_alignTop="@id/ExpiryDateText"
+                android:textSize="12sp"
+                android:textColor="@color/primaryText"
+                android:text="@string/security_text" />
+            <EditText
+                android:id="@+id/SecurityCode"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@id/SecurityText"
+                android:layout_toRightOf="@id/ExpiryDateEnter"
+                android:layout_alignTop="@id/ExpiryDateEnter"
+                android:textSize="20sp"
+                android:maxLength="4"
+                android:inputType="number"
+                android:background="@color/background"
+                local:MvxBind="Text SecurityCode" />
+            <TextView
+                android:id="@+id/PostalCodeText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:textSize="12sp"
+                android:textColor="@color/primaryText"
+                android:layout_below="@+id/ExpiryDateEnter"
+                android:layout_marginTop="10dp"
+                android:text="@string/postal_code_text" />
+            <EditText
+                android:id="@+id/PostalCodeEnter"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@id/PostalCodeText"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:maxLength="6"
+                android:background="@color/background"
+                local:MvxBind="Text PostalCodeEnter" />
+            <Button
+                android:id="@+id/PayButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/primaryDark"
+                android:layout_below="@+id/PostalCodeEnter"
+                android:layout_centerHorizontal="true"
+                android:text="@string/pay_button_text"
+                android:textColor="@color/textIcon"
+                local:MvxBind="Click PayCommand" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

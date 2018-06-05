@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="VersionName">1.0</string>
+  <string name="ApplicationName">SimplePaymentApp</string>
+  <string name="payment_amount_text">Payment Amount</string>
+  <string name="payment_amount_sum">1 EUR</string>
+  <string name="name_on_card_text">Name on Card</string>
+  <string name="card_number_text">Card Number</string>
+  <string name="expiry_date_text">Expiry Date</string>
+  <string name="security_text">Security Code</string>
+  <string name="postal_code_text">Postal Code</string>
+  <string name="pay_button_text">Pay now</string>
+</resources>
